@@ -9,7 +9,10 @@ tasks.withType(JavaCompile) {
     options.compilerArgs = ['-Xlint:all']
 }
 
+apply plugin: 'maven'
+
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
