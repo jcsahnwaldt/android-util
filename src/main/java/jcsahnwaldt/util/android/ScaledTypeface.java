@@ -5,9 +5,6 @@ import android.graphics.Typeface;
 import android.util.TypedValue;
 import android.widget.TextView;
 
-/**
- * @author jc@sahnwaldt.de
- */
 public class ScaledTypeface {
   
   public static ScaledTypeface createFromAsset(AssetManager mgr, String name, float factor, int tagKey) {
