@@ -8,7 +8,7 @@ import android.view.View.OnLongClickListener;
 public class ListenerSetter
 extends SubViewModifier
 {
-  private Object listener;
+  private final Object listener;
   
   public ListenerSetter(Object listener) {
     this(0, listener);
@@ -18,21 +18,20 @@ extends SubViewModifier
     super(viewId);
     if (listener == null) throw new NullPointerException("listener");
     this.listener = listener;
-    modify(null, false); // check type
+    doModify(null); // check listener type
   }
 
   @Override
   public void modify(View view) {
-    view = findView(view, true);
-    modify(view, true);
+    doModify(findView(view, true));
   }
   
-  private void modify(View view, boolean go) {
+  private void doModify(View view) {
     if (listener instanceof OnClickListener) {
-      if (go) view.setOnClickListener((OnClickListener) listener);
+      if (view != null) view.setOnClickListener((OnClickListener) listener);
     }
     else if (listener instanceof OnLongClickListener) {
-      if (go) view.setOnLongClickListener((OnLongClickListener) listener);
+      if (view != null) view.setOnLongClickListener((OnLongClickListener) listener);
     }
     else {
       // inner class names will be ugly, but better than nothing
