@@ -3,5 +3,5 @@
   <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
   <classpathentry kind="output" path="target/classes"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="var" path="M2_REPO/com/google/android/android/2.1.2/android-2.1.2.jar" sourcepath="M2_REPO/com/google/android/android/2.1.2/android-2.1.2-sources.jar"/>
+  <classpathentry kind="var" path="ANDROID_HOME/platforms/android-26/android.jar"/>
 </classpath>
