@@ -8,7 +8,7 @@ import android.widget.TextView;
 public class ScaledTypeface {
   
   public static ScaledTypeface createFromAsset(AssetManager mgr, String file, String name, float factor, int tagKey) {
-    if (file == null) return new ScaledTypeface(Typeface.DEFAULT, "system font", factor, tagKey);
+    if (file == null) return new ScaledTypeface(Typeface.DEFAULT, name, factor, tagKey);
     else return new ScaledTypeface(Typeface.createFromAsset(mgr, file), name, factor, tagKey);
   }
   
