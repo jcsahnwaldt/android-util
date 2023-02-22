@@ -6,7 +6,7 @@ import android.widget.TextView;
 public class MaxLinesSetter
 extends SubViewModifier
 {
-  private int maxLines;
+  private final int maxLines;
 
   public MaxLinesSetter(int maxLines) {
     this(0, maxLines);

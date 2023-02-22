@@ -7,7 +7,7 @@ import android.widget.TextView;
 public class TypefaceSetter
 extends SubViewModifier
 {
-  private Typeface typeface;
+  private final Typeface typeface;
 
   public TypefaceSetter(Typeface typeface) {
     this(0, typeface);
