@@ -6,11 +6,11 @@ public abstract class SubViewModifier
 implements ViewModifier
 {
   protected final int viewId;
-  
+
   public SubViewModifier(int viewId) {
     this.viewId = viewId;
   }
-  
+
   @Override
   public boolean canUse(View view) {
     return findView(view, false) != null;

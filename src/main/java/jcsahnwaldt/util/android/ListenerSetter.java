@@ -9,11 +9,11 @@ public class ListenerSetter
 extends SubViewModifier
 {
   private final Object listener;
-  
+
   public ListenerSetter(Object listener) {
     this(0, listener);
   }
-  
+
   public ListenerSetter(int viewId, Object listener) {
     super(viewId);
     if (listener == null) throw new NullPointerException("listener");
@@ -25,7 +25,7 @@ extends SubViewModifier
   public void modify(View view) {
     doModify(findView(view, true));
   }
-  
+
   private void doModify(View view) {
     if (listener instanceof OnClickListener) {
       if (view != null) view.setOnClickListener((OnClickListener) listener);

@@ -16,12 +16,12 @@ extends SubViewModifier
     super(viewId);
     this.maxLines = maxLines;
   }
-  
+
   @Override
   public boolean canUse(View view) {
     return findView(view, false) instanceof TextView;
   }
-  
+
   @Override
   public void modify(View view) {
     ((TextView)findView(view, true)).setMaxLines(maxLines);

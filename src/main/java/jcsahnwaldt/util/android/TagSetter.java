@@ -6,11 +6,11 @@ public class TagSetter
 extends SubViewModifier
 {
   protected final Object tag;
-  
+
   public TagSetter(Object tag) {
     this(0, tag);
   }
-  
+
   public TagSetter(int viewId, Object tag) {
     super(viewId);
     this.tag = tag;
