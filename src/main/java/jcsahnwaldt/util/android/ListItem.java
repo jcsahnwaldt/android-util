@@ -16,7 +16,7 @@ public class ListItem
   private final List<ViewModifier> modifiers;
 
   public ListItem(int type, int layout) {
-    this(type, layout, new ArrayList<ViewModifier>());
+    this(type, layout, new ArrayList<>());
   }
 
   public ListItem(int type, int layout, List<ViewModifier> modifiers) {

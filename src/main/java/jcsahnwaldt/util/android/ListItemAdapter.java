@@ -23,7 +23,7 @@ extends ArrayAdapter<ListItem>
   }
 
   public ListItemAdapter(Context context, int viewTypeCount) {
-    this(context, new ArrayList<ListItem>(), viewTypeCount);
+    this(context, new ArrayList<>(), viewTypeCount);
   }
 
   @Override
