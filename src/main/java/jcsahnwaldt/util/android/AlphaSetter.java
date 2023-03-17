@@ -24,6 +24,7 @@ extends SubViewModifier
   }
 
   @Override
+  @SuppressWarnings("deprecation")
   public void modify(View view) {
     ImageView imageView = (ImageView)findView(view, true);
     if (Build.VERSION.SDK_INT >= 11) imageView.setAlpha(alpha);
