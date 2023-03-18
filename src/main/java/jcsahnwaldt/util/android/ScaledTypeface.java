@@ -19,7 +19,7 @@ public class ScaledTypeface {
   private final float factor;
 
   /**
-   * @see http://developer.android.com/guide/topics/resources/more-resources.html#Id
+   * @see <a href="http://developer.android.com/guide/topics/resources/more-resources.html#Id">Id</a>
    * @see android.view.View#setTag(int, Object)
    */
   private final int tagKey;
