@@ -1,6 +1,5 @@
 plugins {
     id 'java-library'
-    id 'org.jetbrains.kotlin.jvm' version '1.8.10'
 }
 
 group = 'jcsahnwaldt'
@@ -14,10 +13,6 @@ java {
 compileJava {
     options.encoding = 'UTF-8'
     options.compilerArgs = ['-Xlint:all']
-}
-
-kotlin {
-    jvmToolchain(8)
 }
 
 repositories {
