@@ -1,4 +1,4 @@
-package jcsahnwaldt.util.android
+package jcsahnwaldt.android
 
 import android.app.Activity
 import android.content.Context

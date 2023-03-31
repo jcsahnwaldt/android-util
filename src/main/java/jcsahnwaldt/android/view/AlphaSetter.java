@@ -1,4 +1,4 @@
-package jcsahnwaldt.util.android;
+package jcsahnwaldt.android.view;
 
 import android.os.Build;
 import android.view.View;

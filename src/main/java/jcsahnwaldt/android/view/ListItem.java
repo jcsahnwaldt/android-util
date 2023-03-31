@@ -1,4 +1,4 @@
-package jcsahnwaldt.util.android;
+package jcsahnwaldt.android.view;
 
 import java.util.ArrayList;
 import java.util.List;

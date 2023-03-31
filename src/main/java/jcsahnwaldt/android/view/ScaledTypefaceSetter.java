@@ -1,7 +1,9 @@
-package jcsahnwaldt.util.android;
+package jcsahnwaldt.android.view;
 
 import android.view.View;
 import android.widget.TextView;
+
+import jcsahnwaldt.android.ScaledTypeface;
 
 public class ScaledTypefaceSetter
 extends SubViewModifier

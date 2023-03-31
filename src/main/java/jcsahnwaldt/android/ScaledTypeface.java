@@ -1,4 +1,4 @@
-package jcsahnwaldt.util.android;
+package jcsahnwaldt.android;
 
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
