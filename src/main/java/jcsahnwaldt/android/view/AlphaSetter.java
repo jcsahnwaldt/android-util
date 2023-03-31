@@ -7,7 +7,7 @@ import android.widget.ImageView;
 public class AlphaSetter
 extends SubViewModifier
 {
-  private final float alpha;
+  private final int alpha;
 
   public AlphaSetter(float alpha) {
     this(0, alpha);
@@ -15,7 +15,7 @@ extends SubViewModifier
 
   public AlphaSetter(int viewId, float alpha) {
     super(viewId);
-    this.alpha = alpha;
+    this.alpha = (int)(alpha * 255);
   }
 
   @Override
@@ -27,7 +27,7 @@ extends SubViewModifier
   @SuppressWarnings("deprecation")
   public void modify(View view) {
     ImageView imageView = (ImageView)findView(view, true);
-    if (Build.VERSION.SDK_INT >= 11) imageView.setAlpha(alpha);
-    else imageView.setAlpha((int)(alpha * 255));
+    if (Build.VERSION.SDK_INT >= 16) imageView.setImageAlpha(alpha);
+    else imageView.setAlpha(alpha);
   }
 }
