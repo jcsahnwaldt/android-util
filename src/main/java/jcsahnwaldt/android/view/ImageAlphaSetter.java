@@ -4,16 +4,16 @@ import android.os.Build;
 import android.view.View;
 import android.widget.ImageView;
 
-public class AlphaSetter
+public class ImageAlphaSetter
 extends SubViewModifier
 {
   private final int alpha;
 
-  public AlphaSetter(float alpha) {
+  public ImageAlphaSetter(float alpha) {
     this(0, alpha);
   }
 
-  public AlphaSetter(int viewId, float alpha) {
+  public ImageAlphaSetter(int viewId, float alpha) {
     super(viewId);
     this.alpha = (int)(alpha * 255);
   }
