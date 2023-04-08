@@ -2,13 +2,14 @@ package jcsahnwaldt.android.drawable;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 
 import jcsahnwaldt.android.util.PixelConverter;
 
-public class GradientDrawableBuilder {
+public class GradientDrawableBuilder implements DrawableBuilder {
 
-    public final GradientDrawable drawable;
+    private final GradientDrawable drawable;
 
     private final Resources res;
     private final PixelConverter pc;
@@ -25,6 +26,11 @@ public class GradientDrawableBuilder {
 
     public GradientDrawableBuilder(Context context) {
         this(context.getResources());
+    }
+
+    @Override
+    public GradientDrawable getDrawable() {
+        return drawable;
     }
 
     /** e.g. {@link GradientDrawable#RECTANGLE} */

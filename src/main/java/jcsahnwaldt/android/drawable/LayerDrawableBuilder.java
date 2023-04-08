@@ -6,9 +6,9 @@ import android.graphics.drawable.LayerDrawable;
 
 import jcsahnwaldt.android.util.PixelConverter;
 
-public class LayerDrawableBuilder {
+public class LayerDrawableBuilder implements DrawableBuilder {
 
-    public final LayerDrawable drawable;
+    private final LayerDrawable drawable;
     private final PixelConverter pc;
 
     public LayerDrawableBuilder(Context context, LayerDrawable drawable) {
@@ -18,6 +18,15 @@ public class LayerDrawableBuilder {
 
     public LayerDrawableBuilder(Context context, Drawable... drawables) {
         this(context, new LayerDrawable(drawables));
+    }
+
+    public LayerDrawableBuilder(Context context, DrawableBuilder... builders) {
+        this(context, new LayerDrawable(DrawableBuilder.getDrawables(builders)));
+    }
+
+    @Override
+    public LayerDrawable getDrawable() {
+        return drawable;
     }
 
     // set insets in dp
