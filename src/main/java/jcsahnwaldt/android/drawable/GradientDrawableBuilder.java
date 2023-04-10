@@ -2,12 +2,21 @@ package jcsahnwaldt.android.drawable;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 
 import jcsahnwaldt.android.util.PixelConverter;
 
 public class GradientDrawableBuilder implements DrawableBuilder {
+
+    public static GradientDrawableBuilder rectangle(Resources resources, int colorId) {
+        return new GradientDrawableBuilder(resources)
+        .setShape(GradientDrawable.RECTANGLE)
+        .setColor(colorId);
+    }
+
+    public static GradientDrawableBuilder rectangle(Context context, int colorId) {
+        return rectangle(context.getResources(), colorId);
+    }
 
     private final GradientDrawable drawable;
 
