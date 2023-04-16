@@ -6,7 +6,7 @@ import android.widget.ImageView;
 public class ImageSetter
 extends SubViewModifier
 {
-  private final int drawableId;
+  private int drawableId;
 
   public ImageSetter(int drawableId) {
     this(0, drawableId);
@@ -14,6 +14,10 @@ extends SubViewModifier
 
   public ImageSetter(int viewId, int drawableId) {
     super(viewId);
+    this.drawableId = drawableId;
+  }
+
+  public void setDrawableId(int drawableId) {
     this.drawableId = drawableId;
   }
 
