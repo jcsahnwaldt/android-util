@@ -35,11 +35,11 @@ public class ListItem
   }
 
   public void setModifier(int index, ViewModifier modifier) {
-    modifiers.set(index, modifier);
+    modifiers.set(index >= 0 ? index : modifiers.size() + index, modifier);
   }
 
   public ViewModifier getModifier(int index) {
-    return modifiers.get(index);
+    return modifiers.get(index >= 0 ? index : modifiers.size() + index);
   }
 
   public View getView(View view, ViewGroup parent, LayoutInflater inflater) {
