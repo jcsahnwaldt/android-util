@@ -9,14 +9,24 @@ public class ScaledTypefaceSetter
 extends SubViewModifier
 {
   private final ScaledTypeface typeface;
+  private final int style;
 
   public ScaledTypefaceSetter(ScaledTypeface typeface) {
-    this(0, typeface);
+    this(0, typeface, 0);
+  }
+
+  public ScaledTypefaceSetter(ScaledTypeface typeface, int style) {
+    this(0, typeface, style);
   }
 
   public ScaledTypefaceSetter(int viewId, ScaledTypeface typeface) {
+    this(viewId, typeface, 0);
+  }
+
+  public ScaledTypefaceSetter(int viewId, ScaledTypeface typeface, int style) {
     super(viewId);
     this.typeface = typeface;
+    this.style = style;
   }
 
   @Override
@@ -26,6 +36,6 @@ extends SubViewModifier
 
   @Override
   public void modify(View view) {
-    typeface.set((TextView)findView(view, true));
+    typeface.set((TextView)findView(view, true), style);
   }
 }

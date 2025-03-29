@@ -34,7 +34,11 @@ public class ScaledTypeface {
   }
 
   public void set(TextView textView) {
-    textView.setTypeface(typeface);
+    set(textView, 0);
+  }
+
+  public void set(TextView textView, int style) {
+    textView.setTypeface(typeface, style);
     Float size = (Float)textView.getTag(tagKey);
     if (size == null) {
       size = textView.getTextSize();
