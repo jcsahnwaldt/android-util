@@ -67,7 +67,7 @@ fun Intent.putExtra(k: String?, v: Any?) {
         v is BooleanArray -> putExtra(k, v)
         v is Byte -> putExtra(k, v)
         v is ByteArray -> putExtra(k, v)
-        v is Char -> putExtra(k, v.toChar())
+        v is Char -> putExtra(k, v)
         v is CharArray -> putExtra(k, v)
         v is Double -> putExtra(k, v)
         v is DoubleArray -> putExtra(k, v)
