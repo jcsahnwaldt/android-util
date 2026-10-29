@@ -11,11 +11,6 @@ compileJava {
     options.compilerArgs = ['-Xlint:all']
 }
 
-java {
-    sourceCompatibility = 11
-    targetCompatibility = 11
-}
-
 kotlin.jvmToolchain 11
 
 repositories {
